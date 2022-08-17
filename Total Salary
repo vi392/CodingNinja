@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+       double basic,da,hra,pf;
+		//System.out.println("enter the basic salary and grade");
+		Scanner s = new Scanner(System.in);
+		basic=s.nextDouble();
+		Character ch=s.next().charAt(0);
+        Character.toUpperCase(ch);
+		da=50*basic/100;
+		hra=20*basic/100;
+		pf=11*basic/100;
+        
+        int allow=0;
+		
+        if(ch=='A'){
+            allow=1700;
+        }
+        else if(ch=='B'){
+            allow=1500;
+        }
+        else{
+            allow=1300;
+        }
+     
+		
+		double totalsalary=basic+hra+da+allow-pf;
+		//int value=(int)totalsalary;
+		
+		System.out.println(Math.round(totalsalary));
+
+	}
+}
