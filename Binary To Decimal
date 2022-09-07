@@ -1,0 +1,27 @@
+Convert binary to decimal...
+
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+     
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        
+       int temp=n;
+		int dec_value=0, base=1;
+		
+		while(temp>0) {
+			
+			int remainder=temp%10;
+			temp=temp/10;
+			dec_value+=remainder*base;
+			base=base*2;
+		}
+         System.out.println(dec_value);
+	}
+}
+
+
+
